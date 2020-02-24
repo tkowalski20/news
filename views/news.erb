@@ -23,24 +23,28 @@
   <body>
 
     <div class="container mt-5">
-      <h1>Weather</h1>
+      <h1>The Daily Round-up: Weather & News</h1>
     </div>
 
     <div class="container mt-5">
+      <h2>Weather</h2>
+    </div>
+
+    <div class="container">
         <h5>
-            The weather in <%=@location%> is currently <%= @current_temp %> degrees and <%= @current_weather %>.
+            The weather in <b><%=@location%></b> is currently <b><%= @current_temp %> degrees </b> and <b><%= @current_weather %></b>.
         </h5>
         <h6>
             In general, you can expect the following conditions this week: <%= @current_summary %> 
         </h6>
     </div>
 
-    <div class="container">
+    <div class="container mt-5">
     <div class="col-12 text-center">
-        <table class="table table-striped table-light table-hover">
-        <h2 class="mt-4">
+        <table class="table table-dark table-hover">
+        <h3 class="mt-4">
             <%= @location %> Weather Forecast
-        </h2>
+        </h3>
         <thead>
             <tr>
             <th></th>
@@ -67,14 +71,14 @@
 
 
     <div class="container mt-5">
-      <h1>News</h1>
+      <h2>News</h2>
     </div>
 
-    <div class="container mt-5">
-      <h5>Top 10 News Headlines of Today</h5>
+    <div class="container mt-3">
+      <h5><i>Top 10 News Headlines of Today</i></h5>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mt-3">
       <a href="<%=@news["articles"][0]["url"]%>"><%=@news["articles"][0]["title"]%></a>
       <p> <%= @news["articles"][0]["description"] %> </p>
 

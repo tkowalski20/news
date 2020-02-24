@@ -1,0 +1,28 @@
+
+/* Start */
+
+/* Override headings for Location, Weather, and News */
+h1 {
+    color: black;
+    font-weight: 300;
+    font-family: 'Permanent Marker', fantasy;
+}
+
+h2, .display-4 {
+    color: navy;
+    font-weight: 1000;
+    font-family: 'Permanent Marker', cursive;
+}
+
+/* Override for weather table header */
+h3 {
+    color: slategrey;
+    font-weight: 700;
+    font-family: 'Trebuchet MS';
+}
+
+/* Set general font and background color of pages to get "modern newspaper" feel */
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: seashell;
+}
