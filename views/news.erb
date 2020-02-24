@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <!-- Swap out "Roboto" for the font(s) you want to use -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Your own CSS -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Weather and News</title>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <h1>Weather</h1>
+    </div>
+
+    <div class="container mt-5">
+        <h5>
+            The weather in <%=@location%> is currently <%= @current_temp %> degrees and <%= @current_weather %>.
+        </h5>
+        <h6>
+            In general, you can expect the following conditions this week: <%= @current_summary %> 
+        </h6>
+    </div>
+
+    <div class="container">
+    <div class="col-12 text-center">
+        <table class="table table-striped table-light table-hover">
+        <h2 class="mt-4">
+            <%= @location %> Weather Forecast
+        </h2>
+        <thead>
+            <tr>
+            <th></th>
+            <th>Expected Weather</th>
+            <th>High Temperature (F)</th>
+            <th>Low Temperature (F)</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Today</td>
+            <td><%=@today_weather%></td>
+            <td><%=@today_high%></td>
+            <td><%=@today_low%></td>
+        </tr>
+        <tr>
+            <td>Tomorrow</td>
+            <td><%=@tomorrow_weather%></td>
+            <td><%=@tomorrow_high%></td>
+            <td><%=@tomorrow_low%></td>
+        </tr>
+        </table>
+    </div>
+    </div>
+
+
+    <div class="container mt-5">
+      <h1>News</h1>
+    </div>
+
+    <div class="container mt-5">
+      <h5>Top 10 News Headlines of Today</h5>
+    </div>
+
+    <div class="container mt-5">
+      <a href="<%=@news["articles"][0]["url"]%>"><%=@news["articles"][0]["title"]%></a>
+      <p> <%= @news["articles"][0]["description"] %> </p>
+
+      <a href="<%=@news["articles"][1]["url"]%>"><%=@news["articles"][1]["title"]%></a>
+      <p> <%= @news["articles"][1]["description"] %> </p>
+
+      <a href="<%=@news["articles"][2]["url"]%>"><%=@news["articles"][2]["title"]%></a>
+      <p> <%= @news["articles"][2]["description"] %> </p>
+
+      <a href="<%=@news["articles"][3]["url"]%>"><%=@news["articles"][3]["title"]%></a>
+      <p> <%= @news["articles"][3]["description"] %> </p>
+
+      <a href="<%=@news["articles"][4]["url"]%>"><%=@news["articles"][4]["title"]%></a>
+      <p> <%= @news["articles"][4]["description"] %> </p>
+      
+      <a href="<%=@news["articles"][5]["url"]%>"><%=@news["articles"][5]["title"]%></a>
+      <p> <%= @news["articles"][5]["description"] %> </p>
+
+      <a href="<%=@news["articles"][6]["url"]%>"><%=@news["articles"][6]["title"]%></a>
+      <p> <%= @news["articles"][6]["description"] %> </p>
+
+      <a href="<%=@news["articles"][7]["url"]%>"><%=@news["articles"][7]["title"]%></a>
+      <p> <%= @news["articles"][7]["description"] %> </p>
+
+      <a href="<%=@news["articles"][8]["url"]%>"><%=@news["articles"][8]["title"]%></a>
+      <p> <%= @news["articles"][8]["description"] %> </p>
+
+      <a href="<%=@news["articles"][9]["url"]%>"><%=@news["articles"][9]["title"]%></a>
+      <p> <%= @news["articles"][9]["description"] %> </p>
+
+
+      </div> 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
